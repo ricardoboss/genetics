@@ -4,8 +4,6 @@ import processing.core.PApplet;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
-import java.util.Random;
-
 public class App extends PApplet {
     public static void main(String[] args) {
         PApplet.main(App.class, args);

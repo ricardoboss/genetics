@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ML.NN.Test" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="de.ricardoboss.ml.nn.test.Main" />
+    <module name="neural-network" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="de.ricardoboss.ml.nn.test.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

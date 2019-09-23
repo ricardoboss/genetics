@@ -5,7 +5,18 @@
       <list>
         <option value="$PROJECT_DIR$/abstract/pom.xml" />
         <option value="$PROJECT_DIR$/car/pom.xml" />
+        <option value="$PROJECT_DIR$/neuralnetwork/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/abstractions/genetics/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/car/pom.xml" />
+        <option value="$PROJECT_DIR$/abstractions/neural-network/pom.xml" />
+        <option value="$PROJECT_DIR$/numberpredictor/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/examples/number-predictor/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="12" project-jdk-type="JavaSDK">
