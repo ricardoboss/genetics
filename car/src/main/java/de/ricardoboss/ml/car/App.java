@@ -80,6 +80,19 @@ public class App extends PApplet {
 
         playground.update();
 
+        if (playground.cars.size() > 0) {
+            var r = new Random();
+            var c = playground.cars.get(r.nextInt(playground.cars.size()));
+
+            var s = r.nextFloat();
+            if (s < 0.3f)
+                c.brake();
+            else if (s < 0.5f)
+                c.accelerate();
+            else if (s < 0.9f)
+                c.steer(r.nextFloat() * 1.8f - 0.9f);
+        }
+
         lastUpdate = currentMillis;
     }
 

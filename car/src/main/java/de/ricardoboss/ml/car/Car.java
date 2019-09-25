@@ -3,10 +3,11 @@ package de.ricardoboss.ml.car;
 import processing.core.PConstants;
 import processing.core.PVector;
 
-public class Car {
+class Car {
     private static final int WIDTH = 15;
     private static final int HEIGHT = 35;
-    private static final float MAX_SPEED = 2;
+    private static final float MAX_SPEED = 10f;
+    private static final float MIN_SPEED = 0.1f;
 
     PVector position = new PVector(0, 0);
     PVector velocity = PVector.random2D();
@@ -76,8 +77,11 @@ public class Car {
     }
 
     void update() {
-        if (velocity.mag() > MAX_SPEED)
+        var spd = velocity.mag();
+        if (spd > MAX_SPEED)
             velocity.normalize().mult(MAX_SPEED);
+        else if (spd < MIN_SPEED)
+            velocity.normalize().mult(MIN_SPEED);
 
         position.add(velocity);
     }
