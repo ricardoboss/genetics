@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/car/car.iml" filepath="$PROJECT_DIR$/car/car.iml" />
-      <module fileurl="file://$PROJECT_DIR$/abstract/genetics.iml" filepath="$PROJECT_DIR$/abstract/genetics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/car/car.iml" filepath="$PROJECT_DIR$/examples/car/car.iml" />
+      <module fileurl="file://$PROJECT_DIR$/abstractions/genetics/genetics.iml" filepath="$PROJECT_DIR$/abstractions/genetics/genetics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/machine-learning.iml" filepath="$PROJECT_DIR$/machine-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/abstractions/neural-network/neural-network.iml" filepath="$PROJECT_DIR$/abstractions/neural-network/neural-network.iml" />
     </modules>
   </component>
 </project>

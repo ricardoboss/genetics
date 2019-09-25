@@ -6,13 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="neural-network" />
         <module name="car" />
         <module name="genetics" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="car" target="12" />
-      <module name="genetics" target="1.5" />
+      <module name="genetics" target="12" />
+      <module name="machine-learning" target="1.5" />
+      <module name="neural-network" target="12" />
+      <module name="number-predictor" target="12" />
     </bytecodeTargetLevel>
   </component>
 </project>

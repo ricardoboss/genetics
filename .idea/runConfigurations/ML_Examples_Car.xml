@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Car" type="Application" factoryName="Application">
+  <configuration default="false" name="ML.Examples.Car" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="de.ricardoboss.ml.car.App" />
     <module name="car" />
     <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
