@@ -164,7 +164,7 @@ public class Matrix {
 
             for (int j = 0; j < cols; j++)
             {
-                var line = String.format("%." + precision + "f", data[i][j]);
+                var line = String.format("%." + precision + "f", data[i][j]).substring(0, 7);
                 sb.append(line);
 
                 lineLength += line.length();

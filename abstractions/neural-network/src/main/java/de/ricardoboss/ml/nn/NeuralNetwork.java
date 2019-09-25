@@ -1,21 +1,19 @@
 package de.ricardoboss.ml.nn;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public class NeuralNetwork {
     private static final ActivationFunction SIGMOID = z -> z.apply(val -> 1d / (1d + Math.exp(-val)));
-    private static final CostFunction SUM_HALF_SQUARES = (expected, calculated) ->
-            expected.sub(calculated).apply(val -> 0.5d * Math.pow(val, 2)).sumCols();
+    private static final CostFunction HALF_SQUARES = (expected, calculated) ->
+            expected.sub(calculated).apply(val -> 0.5d * Math.pow(val, 2));
     private static final CostFunctionPrime SIGMOID_PRIME = z ->
             z.apply(val -> Math.exp(-val) / Math.pow(1 + Math.exp(-val), 2));
 
     private final List<Matrix> weights;
     private final ActivationFunction activationFunction;
-    private final CostFunction costFunction = SUM_HALF_SQUARES;
+    private final CostFunction costFunction = HALF_SQUARES;
 
     public NeuralNetwork(List<Matrix> weights)
     {
@@ -60,17 +58,7 @@ public class NeuralNetwork {
     {
         var y_hat = forward(x);
 
-        return costFunction.cost(y, y_hat);
-    }
-
-    public Map<Matrix, Matrix> weightCosts(Matrix x, Matrix y)
-    {
-        var dJdWn = new HashMap<Matrix, Matrix>(weights.size());
-        var y_hat = forward(x);
-
-        // TODO: https://youtu.be/GlcnxUlrtek?t=428
-
-        return dJdWn;
+        return costFunction.calculate(y, y_hat);
     }
 
     public List<Matrix> export()

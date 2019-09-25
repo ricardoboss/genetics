@@ -16,9 +16,27 @@ public class Main {
         System.out.println("X =");
         System.out.println(x);
 
+        var y = new Matrix(new double[][]{
+                new double[]{ 3d },
+                new double[]{ 6d },
+                new double[]{ 9d },
+                new double[]{ 15d },
+        });
+
+        System.out.println("Y = ");
+        System.out.println(y);
+
+
         var y_hat = nn.forward(x);
 
         System.out.println("y_hat =");
         System.out.println(y_hat);
+
+        var e = nn.cost(x, y);
+
+        System.out.println("e = ");
+        System.out.println(e);
+
+        // TODO: calculate list of matrices which correspond to the relative error of each weight in a given matrix of synapses
     }
 }
